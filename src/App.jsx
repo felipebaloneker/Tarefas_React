@@ -20,8 +20,8 @@ let App = () =>{
   return(
       <>
         <div className="container">
-          <Tasks tasks={tasks} />
           <AddTask />
+          <Tasks tasks={tasks} />
         </div>
       </>
   );
