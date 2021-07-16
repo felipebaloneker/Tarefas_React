@@ -1,10 +1,10 @@
 .button{
     background-color: chartreuse;
-    height:40px;
-    padding:0 10px;
-    border-radius:5px;
-    width:100%;
-    font-size:16px;
+    height:6vh;
+    padding:0 1vh;
+    border-radius:1vh;
+    width:21vh;
+    font-size:1rem;
     color:#444;
     font-weight:bold;
     cursor:pointer;
