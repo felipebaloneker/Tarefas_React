@@ -1,10 +1,11 @@
-.task-container{
-    background-color:#444;
-    margin:1vh 0;
-    padding:2vh;
-    display:flex;
-    border-radius:1vh;
-    justify-content:space-between;
-    color:#eee;
-    align-items:center;
+.task-container {
+  background-color: #444;
+  margin: 1vh 0;
+  padding: 2vh;
+  display: flex;
+  border-radius: 1vh;
+  justify-content: space-between;
+  color: #eee;
+  align-items: center;
+  font-size: 1rem;
 }

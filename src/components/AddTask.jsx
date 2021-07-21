@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './AddTask.css';
-import Tasks from './Tasks'
 import Button from './Button';
 
 const AddTask = ({handleTaskAddition}) =>{
@@ -23,6 +22,5 @@ const AddTask = ({handleTaskAddition}) =>{
         </div>
 
     ); 
-}; 
-
+};
 export default AddTask;

@@ -1,12 +1,12 @@
-.button{
-    background-color: chartreuse;
-    height:6vh;
-    padding:0 1vh;
-    border-radius:1vh;
-    width:21vh;
-    font-size:1rem;
-    color:#444;
-    font-weight:bold;
-    cursor:pointer;
-    border:none;
+.button {
+  background-color: chartreuse;
+  max-height: 6vh;
+  padding: 1vh;
+  border-radius: 1vh;
+  width: 21vh;
+  font-size: 1rem;
+  color: #444;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
 }
