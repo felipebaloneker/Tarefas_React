@@ -1,6 +1,6 @@
 .button {
   min-width:2vw;
-  background-color: chartreuse;
+  background-color: #00B4FF;
   padding: 2.3vh 1vh 2.3vh 1vh;
   font-size: 1.24em;
   color: #444;
@@ -8,4 +8,9 @@
   cursor: pointer;
   border: none;
   align-items: center;
+  transition:all 0.3s ease;
+}
+.button:hover{
+  color:#00B4FF;
+  background-color: #444;
 }
