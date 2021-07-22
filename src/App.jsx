@@ -17,9 +17,17 @@ let App = () =>{
       completed:false,
     }
   ]);
+  
+  const handleTaskClick = (taskId)=>{
+    const newTasks = tasks.map((task) =>{
+      if(task.id === taskId) return { ...task, completed: !task.completed}
+      return task;
+    });
+    setTasks(newTasks);
+  };
 
   const handleTaskAddition = (taskTitle) =>{
-    const newTasks = [... tasks, {
+    const newTasks = [...tasks, {
       title:taskTitle,
       id: uuidv4(),
       completed:false,
@@ -31,7 +39,7 @@ let App = () =>{
       <>
         <div className="container">
           <AddTask handleTaskAddition = {handleTaskAddition} />
-          <Tasks tasks={tasks} />
+          <Tasks tasks={tasks} handleTaskClick = {handleTaskClick} />
         </div>
       </>
   );

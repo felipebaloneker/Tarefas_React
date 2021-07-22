@@ -9,3 +9,6 @@
   align-items: center;
   font-size: 1rem;
 }
+.task-title {
+  cursor: pointer;
+}
