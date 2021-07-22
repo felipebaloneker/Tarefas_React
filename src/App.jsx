@@ -22,7 +22,7 @@ let App = () =>{
       completed:false,
     }
   ]);
-
+// Link com APi chamando o Banco de Dados
   useEffect(()=>{
     const fetchTasks = async () =>{
       const{data} = await axios.get(
@@ -32,7 +32,7 @@ let App = () =>{
     };
     fetchTasks();
   })
-  
+  // Marcando Tarefa como Completa
   const handleTaskClick = (taskId)=>{
     const newTasks = tasks.map((task) =>{
       if(task.id === taskId) return { ...task, completed: !task.completed}
@@ -40,16 +40,18 @@ let App = () =>{
     });
     setTasks(newTasks);
   };
-
+  // Adding Tasks and random id
   const handleTaskAddition = (taskTitle) =>{
     const newTasks = [...tasks, {
       title:taskTitle,
+      // random id library 
       id: uuidv4(),
       completed:false,
     }]
     setTasks(newTasks);
   };
 
+  // Deleting Task by id
   const handleTaskDelete = (taskId) =>{
     const newTasks = tasks.filter(task =>task.id !== taskId)
 
@@ -60,6 +62,7 @@ let App = () =>{
       <Router>
         <div className="container">
           <Header />
+          {/* Home Page  */}
           <Route 
           path="/"
           exact 
@@ -72,6 +75,7 @@ let App = () =>{
                 </>
             )}
           />
+          {/* Information Page */}
           <Route 
           path="/:taskTitle"
           exact
