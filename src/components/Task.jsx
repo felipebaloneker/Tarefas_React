@@ -1,6 +1,6 @@
 import React from 'react';
 import './Task.css';
-import {CgClose, CgInfo} from 'react-icons/cg'
+import {CgClose, CgInfo} from 'react-icons/cg';
 
 const Task = ({task, handleTaskClick, handleTaskDelete}) => {
     return(
