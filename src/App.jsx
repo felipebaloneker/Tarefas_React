@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+// import React, {useEffect} from "react"; // Importação necessaria para API banco de dados externo
 import {v4 as uuidv4} from 'uuid';
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -7,7 +8,7 @@ import AddTask from './components/AddTask';
 import Tasks from './components/Tasks';
 import Header from './components/Header'
 import TaskDetails from './components/TaskDetails'
-import axios from "axios";
+// import axios from "axios"; // Importação necessaria para API banco de dados externo
 
 let App = () =>{
   const [tasks, setTasks] = useState([
@@ -20,10 +21,28 @@ let App = () =>{
       id:'2',
       title:'Ler Livros',
       completed:false,
-    }
+    },
+    {
+    
+    "id": 3,
+    "title": "fugiat veniam minus",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "title": "et porro tempora",
+    "completed": true
+  },
+  {
+    "id": 5,
+    "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+    "completed": false
+  }
   ]);
-// Link com APi chamando o Banco de Dados
-  useEffect(()=>{
+
+// Link com API chamando o Banco de Dados
+/*
+useEffect(()=>{
     const fetchTasks = async () =>{
       const{data} = await axios.get(
         "https://jsonplaceholder.cypress.io/todos?_limit=10"
@@ -32,6 +51,8 @@ let App = () =>{
     };
     fetchTasks();
   })
+  */
+
   // Marcando Tarefa como Completa
   const handleTaskClick = (taskId)=>{
     const newTasks = tasks.map((task) =>{
