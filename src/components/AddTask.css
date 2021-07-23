@@ -7,7 +7,7 @@
 }
 
 .add-task-input {
-  max-width:60vw;
+  min-width:20vw;
   border: none;
   background-color: #444;
   color: #eee;
